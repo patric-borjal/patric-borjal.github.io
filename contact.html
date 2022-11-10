@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='styles.css'/>
+    <link rel='stylesheet' href="https://fonts.googleapis.com/css2?family=Roboto+Mono">
+    <style>
+    input[type=button]{
+        font-family: 'Roboto Mono', sans-serif;
+    }    
+    </style>
+    <title>Patrick Borjal Contact Page</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body>
+<div class="wrapper">    
+    <header><h1>PATRICK Borjal</h1></header>
+
+    <main>
+       <form action="request.php" method="POST" class="form-contact">
+            <label for="contact_name">Name </label>
+            <input type="text" name="contact_name" id="contact_name" placeholder="e.g: John Smith" required>
+            <label for="email_address">Email </label>
+            <input type="email" name="email_address" id="email_address" placeholder="mail@example.com"required>
+            <label for="subject">Subject </label>
+            <input type="text" name="subject" id="subject" required>
+            <label for="comments">Comments</label>
+            <textarea name="comments" id="comments" maxlength="500"></textarea>
+            <input type="button" class="button" name="submit" value="Submit">
+        </form>    
+    </main>
+
+    <nav> 
+        <ul>
+            <li><a href="index.html"><---</a>&nbsp;</li>
+            <li><a href="work.html">CV</a>&nbsp;</li>
+            <li><a href="school.html">Academic</a>&nbsp;</li>
+            <li><a href="contact.html" style="background-color:rgb(234, 234, 79)">Contact</a>&nbsp;</li>
+        </ul>
+
+        <a href="https://www.google.ca" style="border: none" target="_blank"> ¯\_(ツ)_/¯ </a> 
+         
+    </nav>
+
+    <div id="extra">//// / //// / //// / //// / //// / //// / //// / //// / //// /</div>
+
+    <div class="footer">
+        Copyright 2022 Patrick Borjal / 
+        <a href="https://ca.linkedin.com/" target="_blank">LinkedIn</a> / 
+        <a href="https://twitter.com/?lang=en" target="_blank">Twitter</a> / 
+        <a href="https://www.instagram.com/" target="_blank">IG</a> / 
+        <a href="https://github.com/patric-borjal" target="_blank">GitHub</a>  / 
+        Download: <a href="/images/SAMPLE CV - EN.pdf" download>
+        CV English</a> / <a href="/images/SAMPLE CV - FR.pdf" download>CV Fran&ccedilais</a>   
+    </div>
+
+</div>
+</body>
+</html>

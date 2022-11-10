@@ -1,0 +1,151 @@
+.wrapper{
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main nav extra"
+    "footer footer footer";
+  grid-template-rows: 80px 1fr 70px;
+  grid-template-columns: 1fr 20% 15%;
+  grid-row-gap: 1px;
+  grid-column-gap: 1px;
+  height: 100vh;
+  margin: 0;
+}
+body{ 
+  background-color: white; 
+  color: #080D3A;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+mark.red{
+  color: red;
+  background: none;
+}
+mark.blue{
+  color: blue;
+  background: none;
+}
+.head-shot{
+  border: 1px #080D3A solid;
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+header {
+  grid-area: header;
+
+  font-family: 'Roboto Mono', sans-serif;
+  color: #080D3A;
+  padding: 1.2em;
+  background: white;    
+}
+.footer {
+  grid-area: footer;
+
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 14px;
+  color: #080D3A;
+  padding: 1.2em;
+  background: white;  
+}
+.footer a{
+  color: #080D3A;
+  text-decoration: none;  
+}
+main {
+  grid-area: main;
+
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 14px;
+  color: #080D3A;
+  padding: 1.2em;
+  background: white;
+  border: 1px #080D3A solid;  
+}
+nav {
+  grid-area: nav;
+
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 14px;
+  color: #080D3A;
+  padding: 1em;
+  background: white;
+  border: 1px #080D3A solid;
+
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+nav a{    
+  text-decoration: none;
+  display: inline-block;
+  text-align: left;
+  border: 1px dotted #CCCCCC;
+  padding: 1em;
+  margin-bottom: 1em;
+  width: 85px;
+  height: 20px;
+}
+nav li{
+  list-style-type: none;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+nav a:link{
+  color: #080D3A;
+}
+nav a:visited{
+  color: #080D3A;
+}
+nav a:hover{
+  border: 3px dotted white;
+}
+#extra {
+  grid-area: extra;
+
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 14px;
+  color: #080D3A;
+  padding: 1.2em;
+  background: white;
+}
+.form-contact {
+  display: grid;
+  grid-template-columns: [labels] auto [controls] 1fr;
+  grid-auto-flow: row;
+  grid-gap: .8em;
+  background: #eee;
+  padding: 1.2em;
+}
+.form-contact > label  {
+  grid-column: labels;
+  grid-row: auto;
+}
+.form-contact > input,
+.form-contact > textarea,
+.form-contact > button {
+  grid-column: controls;
+  grid-row: auto;
+  border: none;
+  padding: 1em;
+}
+
+@media all and (max-width: 575px) {
+  .wrapper {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "extra"
+      "nav"
+      "footer";
+    grid-template-rows: 80px 1fr 70px 1fr 70px;
+    grid-template-columns: minmax(0, 1fr); 
+  }
+}
